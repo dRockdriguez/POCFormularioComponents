@@ -1,0 +1,11 @@
+<h2>Formulario Prueba</h2>
+
+<form [formGroup]="forma" (ngSubmit)="submit()">
+
+  <app-cinput [cPlaceholder]="'Nombre completo..'" 
+  [cLabel]="'Nombre'"
+  [cFormGroup] = "forma"
+  [cFormControlname] = "'nombre'"></app-cinput>
+
+  <button type="submit">Enviar</button>
+</form>

@@ -1,0 +1,8 @@
+<div [formGroup]="cFormGroup">
+  <label *ngIf="cLabel"> {{ cLabel }} </label>
+  <input
+        type="text"
+        [placeholder]="cPlaceholder"
+        [formControlName]="cFormControlname">
+</div>
+
