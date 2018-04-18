@@ -1,11 +1,19 @@
-<h2>Formulario Prueba</h2>
+<h2><div>{{ 'HOME.TITLE' | translate }}</div></h2>
+<app-error [forma]="forma" [mostrarErrores]="mostrarErrores"></app-error>
 
 <form [formGroup]="forma" (ngSubmit)="submit()">
 
-  <app-cinput [cPlaceholder]="'Nombre completo..'" 
-  [cLabel]="'Nombre'"
-  [cFormGroup] = "forma"
-  [cFormControlname] = "'nombre'"></app-cinput>
+  <app-data-component
+  [titulo]="'HOME.SUBTITLE1' | translate"
+  [inputsArr]="inputsArr"
+  [cFormGroup]="forma"
+  [mostrarErrores]="mostrarErrores"></app-data-component>
+  
+  <app-data-component
+  [titulo]="'HOME.SUBTITLE2' | translate"
+  [inputsArr]="inputsArr1"
+  [cFormGroup]="forma"
+  [mostrarErrores]="mostrarErrores"></app-data-component>
 
   <button type="submit">Enviar</button>
 </form>

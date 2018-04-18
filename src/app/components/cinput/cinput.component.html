@@ -1,8 +1,13 @@
 <div [formGroup]="cFormGroup">
   <label *ngIf="cLabel"> {{ cLabel }} </label>
-  <input
-        type="text"
-        [placeholder]="cPlaceholder"
-        [formControlName]="cFormControlname">
-</div>
+    <input
+          type="text"
+          [placeholder]="cPlaceholder"
+          [formControlName]="cFormControlname">
 
+          <div
+            style="color:red"
+            *ngIf="mostrarErrores && !cFormGroup.get(cFormControlname).valid">
+              El campo {{ cFormControlname }} no es válido
+        </div>
+</div>

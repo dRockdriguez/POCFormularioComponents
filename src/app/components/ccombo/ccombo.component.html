@@ -1,0 +1,12 @@
+<div [formGroup]="cFormGroup">
+    <label *ngIf="cLabel"> {{ cLabel }} </label>
+    <select 
+    [formControlName]="cFormControlname">
+      <option value="ES">España</option>
+      <option value="FR">Francia</option>
+      <option value="IT">Italia</option>
+      <option value="AS">Austria</option>
+      <option value="RS">Rusia</option>
+    </select>
+  </div>
+  

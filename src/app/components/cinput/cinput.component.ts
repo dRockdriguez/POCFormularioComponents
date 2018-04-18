@@ -6,18 +6,24 @@ import { FormControl, FormGroup } from '@angular/forms';
   templateUrl: './cinput.component.html',
   styleUrls: ['./cinput.component.css']
 })
-export class CinputComponent {
+export class CinputComponent implements OnInit{
 
   @Input() cPlaceholder: string;
   @Input() cLabel: string;
   @Input() cFormControlname: string;
   @Input() cFormGroup: FormGroup;
   @Input() cFormControl: FormControl;
-  /*@Output() cError: EventEmitter<any> = new EventEmitter();*/
+  @Input() cType: string;
+  @Input() mostrarErrores: boolean;
 
-  constructor() {
-    console.log('Componente input creado');
-    console.log(this.cPlaceholder);
+  // @Output() cError: EventEmitter<string> = new EventEmitter();
+
+  constructor(
+  ) {
+    
   }
 
+  ngOnInit(){
+  
+  }
 }

@@ -1,0 +1,18 @@
+<h2>{{titulo}}</h2>
+<hr>
+
+<div *ngFor="let input of inputsArr" >
+      
+    <app-cinput *ngIf="input.cType == 'cInput'"
+      [cPlaceholder]="input.cPlaceholder" 
+      [cLabel]="input.cLabel"
+      [cFormGroup]="cFormGroup"
+      [cFormControlname]="input.cName"
+      [mostrarErrores] ="mostrarErrores"></app-cinput>
+
+    <app-ccombo *ngIf="input.cType == 'cCombo'"
+      [cLabel]="input.cLabel"
+      [cFormGroup]="cFormGroup"
+      [cFormControlname]="input.cName"></app-ccombo>
+      
+  </div>

@@ -1,0 +1,10 @@
+ 
+<div *ngFor="let key of keysForm">
+  <div style="background:red;color:white;padding:10px;border:1px solid black" 
+    *ngIf="mostrarErrores && !forma.get(key).valid">
+    El campo {{ key }} no es válido
+  </div>
+  
+  
+  
+</div>
